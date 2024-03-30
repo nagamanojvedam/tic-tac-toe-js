@@ -1,5 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Madimi One", sans-serif;
+}
+body {
+  position: relative;
+}
+
+.container {
+  height: 100vh;
+  z-index: 0;
+  background-color: rgba(0, 128, 128, 0.5);
+}
+.overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 128, 0, 0.5);
+  color: white;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.welcome-board {
+  font-size: 4rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  background-color: rgb(77, 77, 77);
+  color: whitesmoke;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  background-color: rgba(0, 128, 128, 0.5);
+}
+
+.game-board {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  place-items: center;
+  padding: 0.5rem;
+  background-color: black;
+}
+.grid-item {
+  width: 100px;
+  height: 100px;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: teal;
+}
+
+.disable-item {
+  pointer-events: none;
 }
